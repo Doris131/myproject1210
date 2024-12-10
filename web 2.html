@@ -125,7 +125,9 @@
 
     <script>
         async function fetchContractTerms() {
-            const apiKey = "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";
+            const encodedKey = "sk-svcacct-fyJ5BX_0b5pwfM0CMOQPB2phnkedzJWuQAHvlp0Y5G-hKr78ksKfi-B64ymqNVAkDgT3BlbkFJfvort_kGpXTsqNuouL8qMtGAi_gnk9zwq_anAzqeDs0USmRLtt2K8KDBy_Vg-qxHwA"; 
+            const apiKey = atob(encodedKey);
+            //const apiKey = "sk-svcacct-fyJ5BX_0b5pwfM0CMOQPB2phnkedzJWuQAHvlp0Y5G-hKr78ksKfi-B64ymqNVAkDgT3BlbkFJfvort_kGpXTsqNuouL8qMtGAi_gnk9zwq_anAzqeDs0USmRLtt2K8KDBy_Vg-qxHwA";
             const endpoint = "https://api.openai.com/v1/chat/completions";
 
             const prompt = `生成寵物贈與契約7條條款，每條條款需具體描述送養人甲方與領養人乙方對寵物的責任和義務，例如照顧方式、違約罰則、探視權利等。條款需按照條理性分條列舉，清晰明確。`;
